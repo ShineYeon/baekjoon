@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84824F86263FFAA7000A8496 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84824F85263FFAA7000A8496 /* main.cpp */; };
+		84824F9B26401B29000A8496 /* 1546.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84824F9A26401B29000A8496 /* 1546.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,11 @@
 
 /* Begin PBXFileReference section */
 		84824F82263FFAA7000A8496 /* baekjoon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = baekjoon; sourceTree = BUILT_PRODUCTS_DIR; };
-		84824F85263FFAA7000A8496 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		84824F85263FFAA7000A8496 /* 10871.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 10871.cpp; sourceTree = "<group>"; };
+		84824F8E263FFC3D000A8496 /* 1110.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1110.cpp; sourceTree = "<group>"; };
+		84824F9226400215000A8496 /* 2577.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2577.cpp; sourceTree = "<group>"; };
+		84824F96264008EE000A8496 /* 2839.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2839.cpp; sourceTree = "<group>"; };
+		84824F9A26401B29000A8496 /* 1546.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1546.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,11 @@
 		84824F84263FFAA7000A8496 /* baekjoon */ = {
 			isa = PBXGroup;
 			children = (
-				84824F85263FFAA7000A8496 /* main.cpp */,
+				84824F85263FFAA7000A8496 /* 10871.cpp */,
+				84824F8E263FFC3D000A8496 /* 1110.cpp */,
+				84824F9226400215000A8496 /* 2577.cpp */,
+				84824F96264008EE000A8496 /* 2839.cpp */,
+				84824F9A26401B29000A8496 /* 1546.cpp */,
 			);
 			path = baekjoon;
 			sourceTree = "<group>";
@@ -118,7 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84824F86263FFAA7000A8496 /* main.cpp in Sources */,
+				84824F9B26401B29000A8496 /* 1546.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
