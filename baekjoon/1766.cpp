@@ -7,51 +7,46 @@
 
 #include <iostream>
 #include <queue>
+#include <vector>
 using namespace std;
 
-bool finished[32001] = {false, };
+int N, M;
+vector<int> connected[32001];
+int edges[32001];
 
-//first가 작은 것 우선
-struct cmp{
-    bool operator()(pair<int, int> a, pair<int, int> b){
-        return a.first>b.first;
+void solution(){
+    
+    priority_queue<int, vector<int>, greater<int>> q;
+    for(int i=1;i<=N;i++){
+        if(edges[i]==0)
+            q.push(i);
     }
-};
+    
+    for(int j=1;j<=N;j++){
+        int tmp = q.top();
+        printf("%d ", tmp);
+        q.pop();
+        
+        for(int i = 0;i<connected[tmp].size();i++){
+            edges[connected[tmp][i]] -= 1;
+            if(edges[connected[tmp][i]] == 0)
+                q.push(connected[tmp][i]);
+            
+        }
+    }
+    
+}
 
 int main(){
-    int N, M;
     scanf("%d %d", &N, &M);
-    priority_queue<pair<int, int>, vector<pair<int, int>>, cmp> pq;
-    int arr[32001] = {0,};
-    while(M--){
+    
+    for(int i=1;i<=M;i++){
         int a, b;
         scanf("%d %d", &a, &b);
-        pq.push({a, b});
+        connected[a].push_back(b);
+        edges[b]++;
     }
-    for(int i=1;i<=N;i++){
-        if(arr[i] == 0){
-            if(!finished[i]){
-                printf("%d\n", i);
-                finished[i] = true;
-            }
-            else
-                continue;
-        }
-        else{
-            if(!finished[arr[i]]){
-                printf("%d ", arr[i]);
-                finished[arr[i]]=true;
-                printf("%d ", i);
-                finished[i] = true;
-            }
-            else{
-                if(!finished[i]){
-                    printf("%d ", i);
-                    finished[i] = true;
-                }
-                else
-                    continue;
-            }
-        }
-    }
+    
+    solution();
+    
 }
